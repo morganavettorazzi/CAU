@@ -2,10 +2,26 @@
 const routes = [
   {
     path: '/',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [
-      { path: '', component: () => import('pages/Index.vue') }
-    ]
+    name: 'Index',
+    component: () => import('pages/Index.vue')
+  },
+
+  {
+    path: '/chamados',
+    name: 'Chamados',
+    component: () => import('pages/chamados.vue')
+  },
+
+  {
+    path: '/home',
+    name: 'Home',
+    component: () => import('pages/home.vue')
+  },
+
+  {
+    path: '/responderChamado',
+    name: 'ResponderChamado',
+    component: () => import('pages/msgChamado.vue')
   },
 
   // Always leave this as last one,
